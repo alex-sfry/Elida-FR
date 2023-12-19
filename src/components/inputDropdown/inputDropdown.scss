@@ -1,0 +1,30 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import '../../styles/scss/vars.scss';
+
+.dropdown-container {
+  width: 100%;
+
+  .dropdown {
+    .dropdown-menu {
+      .dropdown-item {
+        cursor: pointer;
+      }
+
+      .dropdown-item:hover {
+        background-color: $blue;
+        color: $white;
+      }
+
+      .form-control:focus {
+        border-color: #dee2e6;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .selected-items > div {
+    background-color: $cyan;
+    border-radius: 5px;
+  }
+}

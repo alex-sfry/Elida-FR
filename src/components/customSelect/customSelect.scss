@@ -1,0 +1,66 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import '../../styles/scss/vars.scss';
+
+.dropdown-container {
+  width: 100%;
+
+  .dropdown {
+    .btn-outline-dark {
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+    }
+
+    .btn-outline-dark:active,
+    .btn-outline-dark:focus,
+    .btn-outline-dark {
+      background-color: $gray-100;
+      color: $gray-900;
+    }
+
+    .btn-outline-dark:hover {
+      background-color: $gray-200;
+      color: $gray-900;
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        cursor: pointer;
+      }
+
+      .dropdown-item:hover {
+        background-color: $blue;
+        color: $white;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .form-control:focus {
+        border-color: #dee2e6;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .selected-items {
+    min-height: 2em;
+  }
+
+  .selected-items > div {
+    background-color: $cyan;
+    border-radius: 5px;
+
+    .btn-close {
+      padding: 0;
+      width: $btn-close-size;
+      height: $btn-close-size;
+    }
+
+    .btn-close:focus {
+      box-shadow: none;
+    }
+  }
+}

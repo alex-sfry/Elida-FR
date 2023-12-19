@@ -1,0 +1,9 @@
+mixin list(items)
+    each val in items
+        li.list-unstyled.list-group-item.py-1.px-2
+            a.text-decoration-none(href="#")=val
+
+mixin cards(items)
+    each val in items
+        li.book-card-item.col-md-1.list-unstyled.rounded
+            include ../components/card/card.pug

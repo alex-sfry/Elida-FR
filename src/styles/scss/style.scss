@@ -1,0 +1,25 @@
+@import 'fonts.scss';
+@import "../../components/commoditiesForm/commoditiesForm.scss";
+
+.wrapper {
+    font-family: 'Inter';
+}
+
+a {
+    color: inherit
+}
+
+button {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.container {
+    width: 700px;
+    margin: 0 auto;
+}

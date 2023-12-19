@@ -1,0 +1,31 @@
+- const landingPadSize = 'landingPadSize'
+- const includeSurface = 'includeSurface'
+- const sysSearchDropdown = 'sys-search'
+- const inputSysSearchDropdownName = 'system'
+- const commoditiesSelectInput = 'dd-search-commodities'
+- const commoditiesSelected = 'selected-items-commodities'
+- const inputCommoditiesName = 'commodities'
+
+h1.mt-4.text-center Search for Commodities
+form.c-form.w-100.h-100.p-2.border.border-dark.rounded-2(action='' method='POST' id='c-form' )
+    div.h-100.d-flex.flex-column.gap-2.justify-content-between
+        div.d-flex.flex-column.gap-3
+            div.d-flex.gap-2.justify-content-between
+                div.w-100
+                    include ../customSelect/customSelect.pug
+                div.w-100
+                    include ../inputDropdown/inputDropdown.pug
+            div.d-flex.gap-2.justify-content-between
+                div.w-100
+                    select.form-select.form-select-sm(id='landingPadSize' name='landingPadSize')
+                        option(value='')
+                        option(value='S') S
+                        option(value='M') M
+                        option(value='L') L
+                div.w-100
+                    select.form-select.form-select-sm(id='includeSurface' name='includeSurface')
+                        option(value='')
+                        option(value='Yes') Yes
+                        option(value='No') No
+        div.d-flex.justify-content-center
+            button.btn.btn-primary.w-50(type='submit' name='submit') Submit
