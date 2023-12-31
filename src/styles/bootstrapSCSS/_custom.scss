@@ -10,12 +10,6 @@
 @import "../../../node_modules/bootstrap/scss/variables-dark";
 
 // ===========================Customization==========================
-//$input-focus-box-shadow: none;
-//$input-focus-border-color: $input-border-color;
-//$btn-close-width: 0.65em;
-//$btn-close-padding-x: 0;
-//$btn-close-padding-y: 0;
-//$btn-close-focus-shadow: 0;
 
 // $xxxl-breakpoint: (
 //   xxxl: 1700px
@@ -55,11 +49,11 @@
 @import "../../../node_modules/bootstrap/scss/card";
 @import "../../../node_modules/bootstrap/scss/accordion";
 @import "../../../node_modules/bootstrap/scss/breadcrumb";
-// @import "../../../node_modules/bootstrap/scss/pagination";
+@import "../../../node_modules/bootstrap/scss/pagination";
 // @import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/alert";
 // @import "../../../node_modules/bootstrap/scss/progress";
-@import "../../../node_modules/bootstrap/scss/list-group";
+//@import "../../../node_modules/bootstrap/scss/list-group";
 @import "../../../node_modules/bootstrap/scss/close";
 // @import "../../../node_modules/bootstrap/scss/toasts";
 // @import "../../../node_modules/bootstrap/scss/modal";

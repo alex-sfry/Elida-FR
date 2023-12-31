@@ -119,8 +119,11 @@ export const css = () => {
 };
 
 export const scripts = async () => {
-    const scriptsPath = glob.sync(paths.scripts.src, { posix: true, dotRelative: true, ignore: 'src/script/Helpers/**' });
-    console.log(scriptsPath)
+    const scriptsPath = glob.sync(
+        paths.scripts.src,
+        { posix: true, dotRelative: true, ignore: 'src/script/Helpers/**' }
+    );
+
     const bundle = await rollup.rollup({
         input: scriptsPath,
         plugins: [resolve(), babel({ babelHelpers: 'bundled' })]

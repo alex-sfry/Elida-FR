@@ -1,15 +1,17 @@
+- let i = 0;
+
 .dropdown-container.d-input
     input(type='hidden')
     .dropdown
-        input.dropdown-toggle.w-100.py-1.border.rounded-2(
+        input.dropdown-toggle.w-100.py-1.border.rounded-2.border-dark.shadow-none(
             type='text' class=sysSearchDropdown
             id=sysSearchDropdown
             name=inputSysSearchDropdownName
             data-bs-toggle='dropdown'
             data-bs-auto-close='true'
-            aria-expanded='false')
+            aria-expanded='false'
+            placeholder='Search systems'
+        )
         ul.dropdown-menu.px-1.w-100.me-2
-            //input#dd-search-system.form-control(type='text' placeholder='search')
-            li.dropdown-item Action
-            li.dropdown-item Another action
-            li.dropdown-item Something else here
+            while i < 10
+                li.dropdown-item= i++

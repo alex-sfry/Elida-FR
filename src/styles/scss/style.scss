@@ -2,7 +2,9 @@
 @import "../../components/commoditiesForm/commoditiesForm.scss";
 
 .wrapper {
-    font-family: 'Inter';
+    font-family: 'SintonyRegular', sans-serif;
+    font-weight: 400;
+    height: 100vh;
 }
 
 a {
@@ -15,8 +17,8 @@ button {
     font-size: inherit;
 }
 
-.wrapper {
-    height: 100vh;
+input {
+    outline: 0;
 }
 
 .container {

@@ -1,12 +1,12 @@
 .dropdown-container.c-select.m-0
-    input(type='hidden' name=inputCommoditiesName)
+    select.form-select.form-select-sm.d-none(id='c-hiddenSelect' name=inputCommoditiesName)
     .dropdown
         .selected-items.h-100.d-flex.gap-1.flex-wrap.w-100.border.border-dark.rounded-2.mb-1.p-1(id=commoditiesSelected)
         button.btn.btn-outline-dark.dropdown-toggle.w-100.px-4(type='button' data-bs-toggle='dropdown' data-bs-auto-close='false' aria-expanded='false')
             | Select commodities
         div.position-relative
             ul.dropdown-menu.px-1.w-100.p-1.mt-1
-                input.form-control(type='text' id=commoditiesSelectInput placeholder='search')
+                input.form-control.shadow-none(type='text' id=commoditiesSelectInput placeholder='search')
                 li.dropdown-item Action
                 li.dropdown-item Another action
                 li.dropdown-item Something else here

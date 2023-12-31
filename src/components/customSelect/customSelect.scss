@@ -39,14 +39,14 @@
       }
 
       .form-control:focus {
-        border-color: #dee2e6;
-        box-shadow: none;
+        border-color: $input-border-color;
       }
     }
   }
 
   .selected-items {
-    min-height: 2em;
+    min-height: 2.125em;
+
   }
 
   .selected-items > div {
