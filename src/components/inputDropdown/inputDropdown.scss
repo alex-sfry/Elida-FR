@@ -1,12 +1,13 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
-@import '../../styles/scss/vars.scss';
 
-.dropdown-container {
+.c-dropdown {
   width: 100%;
 
   .dropdown {
     .dropdown-menu {
+      border-color: $gray-500;
+
       .dropdown-item {
         cursor: pointer;
       }
@@ -21,5 +22,11 @@
   .selected-items > div {
     background-color: $cyan;
     border-radius: 5px;
+  }
+
+  .dropdown-item,
+  input::placeholder {
+    font-family: 'SintonyRegular', sans-serif;
+    letter-spacing: 2px;
   }
 }

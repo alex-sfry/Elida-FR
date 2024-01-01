@@ -1,9 +1,9 @@
 - let i = 0;
 
-.dropdown-container.d-input
+.c-dropdown.dropdown-container.d-input.bg-transparent
     input(type='hidden')
-    .dropdown
-        input.dropdown-toggle.w-100.py-1.border.rounded-2.border-dark.shadow-none(
+    .dropdown.bg-transparent
+        input.dropdown-toggle.w-100.p-1.border.rounded-2.border-dark.shadow-none.bg-transparent.fw-normal(
             type='text' class=sysSearchDropdown
             id=sysSearchDropdown
             name=inputSysSearchDropdownName
@@ -12,6 +12,6 @@
             aria-expanded='false'
             placeholder='Search systems'
         )
-        ul.dropdown-menu.px-1.w-100.me-2
+        ul.dropdown-menu.px-1.w-100.me-2.shadow-sm
             while i < 10
-                li.dropdown-item= i++
+                li.dropdown-item.fw-normal= i++

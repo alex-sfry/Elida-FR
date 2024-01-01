@@ -10,9 +10,10 @@ html(lang="en")
         link(rel="stylesheet", href="css/style.min.css")
 
     body
-        block header
-        block main
-        block footer
+        .body-wrapper.d-flex.flex-column
+            block header
+            block main
+            block footer
 
         script(type="module" src="js/bootstrap.min.js")
         script(type="module" src="js/main.min.js")

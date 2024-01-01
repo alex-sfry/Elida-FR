@@ -1,0 +1,62 @@
+.header {
+  background-color: $header-color;
+  height: 96px;
+  max-height: 96px;
+
+  .navbar-toggler {
+    background-color: $custom-light-orange;
+  }
+
+  .navbar {
+    background-color: $header-color;
+  }
+
+  .logo {
+    font-family: 'EuroCaps';
+    font-size: $f-size-logo;
+    color: $custom-orange;
+  }
+
+  .menu {
+    &-item {
+      position: relative;
+    }
+
+    &-item::after {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      content: "";
+      width: 0px;
+      opacity: 0;
+      height: 3px;
+      background-color: $custom-light-orange;
+      transition-property: opacity, width, left;
+      transition-duration: 200ms;
+      transition-timing-function: linear;
+    }
+
+    &-item:hover {
+      &::after {
+        color: $custom-light-orange;
+        opacity: 1;
+        left: 0;
+        width: 100%;
+      }
+    }
+    &-link {
+      color: $custom-white;
+    }
+
+    &-link,
+    &-link.active{
+      font-family: 'SintonyBold';
+      font-size: $f-size-menu;
+    }
+
+    &-link:hover,
+    &-link.active{
+      color: $custom-light-orange;
+    }
+  }
+}

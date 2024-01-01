@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import sourcemaps from 'gulp-sourcemaps';
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
 import rename from 'gulp-rename';

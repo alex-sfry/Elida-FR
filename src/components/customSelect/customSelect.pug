@@ -1,13 +1,17 @@
-.dropdown-container.c-select.m-0
+.c-select.dropdown-container.m-0.bg-transparent
     select.form-select.form-select-sm.d-none(id='c-hiddenSelect' name=inputCommoditiesName)
-    .dropdown
-        .selected-items.h-100.d-flex.gap-1.flex-wrap.w-100.border.border-dark.rounded-2.mb-1.p-1(id=commoditiesSelected)
-        button.btn.btn-outline-dark.dropdown-toggle.w-100.px-4(type='button' data-bs-toggle='dropdown' data-bs-auto-close='false' aria-expanded='false')
+    .dropdown.bg-transparent
+        .selected-items.h-100.d-flex.gap-1.flex-wrap.w-100.border.border-dark.rounded-2.mb-1.p-1.bg-transparent.fw-normal(id=commoditiesSelected)
+        button.btn.btn-outline-dark.dropdown-toggle.w-100.px-4.fw-normal.bg-secondary-subtle(
+            type='button'
+            data-bs-toggle='dropdown'
+            data-bs-auto-close='false'
+            aria-expanded='false'
+        )
             | Select commodities
-        div.position-relative
-            ul.dropdown-menu.px-1.w-100.p-1.mt-1
-                input.form-control.shadow-none(type='text' id=commoditiesSelectInput placeholder='search')
-                li.dropdown-item Action
-                li.dropdown-item Another action
-                li.dropdown-item Something else here
-
+        div
+            ul.dropdown-menu.px-1.w-100.p-1.mt-1.shadow-sm
+                input.form-control.shadow-none.bg-transparent.fw-normal(type='text' id=commoditiesSelectInput placeholder='search')
+                li.dropdown-item.fw-normal Action
+                li.dropdown-item.fw-normal Another action
+                li.dropdown-item.fw-normal Something else here

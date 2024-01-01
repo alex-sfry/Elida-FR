@@ -11,13 +11,11 @@
 
 // ===========================Customization==========================
 
-// $xxxl-breakpoint: (
-//   xxxl: 1700px
-// );
+$violet: (
+  "violet": #7752FE
+);
 
-// $xxxl-max-width: (
-//   xxxl: 1620px
-// );
+$theme-colors: map-merge($theme-colors,  $violet);
 
 // $grid-breakpoints: map-merge($grid-breakpoints, $xxxl-breakpoint);
 

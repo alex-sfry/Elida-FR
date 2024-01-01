@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import { glob } from 'glob';
 import { deleteAsync } from 'del';
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
 import rename from 'gulp-rename';

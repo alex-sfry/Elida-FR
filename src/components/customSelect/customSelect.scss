@@ -2,10 +2,15 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import '../../styles/scss/vars.scss';
 
-.dropdown-container {
+.c-select {
   width: 100%;
 
   .dropdown {
+    .dropdown-toggle,
+    .selected-items {
+      font-family: 'SintonyRegular', sans-serif;
+    }
+
     .btn-outline-dark {
       font-family: inherit;
       font-weight: inherit;
@@ -15,16 +20,19 @@
     .btn-outline-dark:active,
     .btn-outline-dark:focus,
     .btn-outline-dark {
-      background-color: $gray-100;
+      //background-color: $gray-100;
       color: $gray-900;
     }
 
     .btn-outline-dark:hover {
-      background-color: $gray-200;
-      color: $gray-900;
+      background-color: $secondary !important;
+      color: $light;
     }
 
     .dropdown-menu {
+      border-color: $gray-500;
+      background-color: $custom-white;
+
       .dropdown-item {
         cursor: pointer;
       }
@@ -38,6 +46,12 @@
         display: none;
       }
 
+      .dropdown-item,
+      .form-control::placeholder {
+        font-family: 'SintonyRegular', sans-serif;
+        letter-spacing: 2px;
+      }
+
       .form-control:focus {
         border-color: $input-border-color;
       }
@@ -46,7 +60,6 @@
 
   .selected-items {
     min-height: 2.125em;
-
   }
 
   .selected-items > div {

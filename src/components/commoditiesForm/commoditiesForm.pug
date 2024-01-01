@@ -6,38 +6,86 @@
 - const commoditiesSelected = 'selected-items-commodities';
 - const inputCommoditiesName = 'commodities';
 - const sortBy = 'sortBy';
+- const distanceFromStar = 'distanceFromStar';
+- const minSupply = 'minSupply';
+- const minDemand = 'minDemand';
+- const maxDistanceFromRefStar = 'maxDistanceFromRefStar';
 
-h1.mt-4.text-center Search for Commodities
-form.c-form.w-100.h-100.p-2.border.border-dark.rounded-2(action='' method='POST' id='c-form' )
-    div.h-100.d-flex.flex-column.gap-2.justify-content-between
-        div.d-flex.flex-column.gap-3
-            div.d-flex.gap-4.justify-content-between
-                div.w-100
-                    div.w-100
-                        label(for='c-hiddenSelect') Commodities:
-                        include ../customSelect/customSelect.pug
-                div.d-flex.gap-2.flex-column.justify-content-between.w-100
-                    div.w-100
-                        label(for=sysSearchDropdown) Reference system:
-                        include ../inputDropdown/inputDropdown.pug
-                    div.w-100
-                        label(for=landingPadSize) Landing pad size:
-                        select.form-select.form-select-sm.shadow-none.border-dark(id=landingPadSize name=landingPadSize)
-                            option(value='')
-                            option(value='S') S
-                            option(value='M') M
-                            option(value='L') L
-                    div.w-100
-                        label(for=includeSurface) Include surface:
-                        select.form-select.form-select-sm.shadow-none.border-dark(id=includeSurface name=includeSurface)
-                            option(value='')
-                            option(value='Yes') Yes
-                            option(value='No') No
-                    div.w-100
-                        label(for=sortBy) Sort by:
-                        select.form-select.form-select-sm.shadow-none.border-dark(id=sortBy name=sortBy)
-                            option(value='')
-                            option(value='Distance') Distance
-                            option(value='Price') Price
-        div.d-flex.justify-content-center
-            button.btn.btn-primary.w-50(type='submit' name='submit') Submit
+
+form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='POST' id='c-form' )
+    h1.mt-1.mb-4.text-center.fs-2.fw-normal Search for commodities
+    .container-xl
+        .h-100.d-flex.flex-column.justify-content-between.fs-6
+            .d-flex.flex-column
+                .row.gap-3
+                    .col
+                        div
+                            label.fw-bold(for='c-hiddenSelect') Commodities:
+                            include ../customSelect/customSelect.pug
+                    .col.d-flex.gap-2.flex-column.justify-content-between
+                        div
+                            label.fw-bold(for=sysSearchDropdown) Reference system:
+                            include ../inputDropdown/inputDropdown.pug
+                        div
+                            label.fw-bold(for=landingPadSize) Min. landing pad size:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=landingPadSize name=landingPadSize)
+                                option.fw-normal(value='S') S
+                                option.fw-normal(value='M') M
+                                option.fw-normal(value='L') L
+                        div
+                            label.fw-bold(for=includeSurface) Include surface:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=includeSurface name=includeSurface)
+                                option.fw-normal(value='Yes') Yes
+                                option.fw-normal(value='No') No
+                        div
+                            label.fw-bold(for=sortBy) Sort by:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=sortBy name=sortBy)
+                                option.fw-normal(value='Price') Price
+                                option.fw-normal(value='Distance') Distance
+                    .col.d-flex.gap-2.flex-column.justify-content-between
+                        div
+                            label.fw-bold(for=distanceFromStar) Max. distance from the star:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=distanceFromStar name=distanceFromStar)
+                                option.fw-normal(value='Any') Any
+                                option.fw-normal(value='100 ls') 100 ls
+                                option.fw-normal(value='500 ls') 500 ls
+                                option.fw-normal(value='1000 ls') 1000 ls
+                                option.fw-normal(value='2000 ls') 2000 ls
+                                option.fw-normal(value='5000 ls') 5000 ls
+                                option.fw-normal(value='10000 ls') 10000 ls
+                        div
+                            label.fw-bold(for=minSupply) Min. supply:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=minSupply name=minSupply)
+                                option.fw-normal(value='Any') Any
+                                option.fw-normal(value='100') 100
+                                option.fw-normal(value='500') 500
+                                option.fw-normal(value='1000') 1000
+                                option.fw-normal(value='2000') 2000
+                                option.fw-normal(value='5000') 5000
+                                option.fw-normal(value='10000') 10000
+                        div
+                            label.fw-bold(for=minDemand) Min. demand:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=minDemand name=minDemand)
+                                option.fw-normal(value='Any') Any
+                                option.fw-normal(value='100') 100
+                                option.fw-normal(value='500') 500
+                                option.fw-normal(value='1000') 1000
+                                option.fw-normal(value='2000') 2000
+                                option.fw-normal(value='5000') 5000
+                                option.fw-normal(value='10000') 10000
+                        div
+                            label.fw-bold(for=maxDistanceFromRefStar) Max. distance from ref. system:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=maxDistanceFromRefStar name=maxDistanceFromRefStar)
+                                option.fw-normal(value='Any') Any
+                                option.fw-normal(value='25 LY') 25 LY
+                                option.fw-normal(value='50 LY') 50 LY
+                                option.fw-normal(value='100 LY') 100 LY
+                                option.fw-normal(value='250 LY') 250 LY
+                                option.fw-normal(value='500 LY') 500 LY
+                                option.fw-normal(value='1000 LY') 1000 LY
+            .row.justify-content-center
+                .col-md-3.mb-2.pt-5
+                    button.btn.btn-violet.fs-6.fw-bold.text-light.text-uppercase.mt-5.w-100(
+                        type='submit'
+                        name='submit'
+                    ) Submit

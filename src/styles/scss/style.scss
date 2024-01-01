@@ -1,10 +1,18 @@
 @import 'fonts.scss';
-@import "../../components/commoditiesForm/commoditiesForm.scss";
+@import 'vars.scss';
+@import '../../components/commoditiesForm/commoditiesForm.scss';
+@import '../../components/header/header.scss';
+
+
+.body-wrapper {
+    height: 100vh;
+}
 
 .wrapper {
     font-family: 'SintonyRegular', sans-serif;
     font-weight: 400;
     height: 100vh;
+    background-color: $main-background;
 }
 
 a {
@@ -15,13 +23,14 @@ button {
     font-family: inherit;
     font-weight: inherit;
     font-size: inherit;
+    letter-spacing: inherit;
 }
 
 input {
     outline: 0;
 }
 
-.container {
-    width: 700px;
+.cnt {
+    max-width: 1280px;
     margin: 0 auto;
 }

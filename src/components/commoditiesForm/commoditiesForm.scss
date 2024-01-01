@@ -1,10 +1,25 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
-@import '../../styles/scss/vars.scss';
 @import "../customSelect/customSelect.scss";
 @import "../inputDropdown/inputDropdown.scss";
 
 
 .c-form {
-height: 500px;
+  background-color: $custom-white;
+  font-family: 'SintonyBold', sans-serif;
+  letter-spacing: 2px;
+
+  select,
+  option {
+    font-family: 'SintonyRegular', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .btn-violet {
+    font-family: 'SintonyBold', sans-serif;
+    letter-spacing: 4px;
+  }
 }
+
+
