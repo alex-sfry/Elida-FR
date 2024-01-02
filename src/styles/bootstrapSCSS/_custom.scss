@@ -11,11 +11,12 @@
 
 // ===========================Customization==========================
 
-$violet: (
-  "violet": #7752FE
+$custom-colors: (
+  "violet": #7752FE,
+  "light-orange": #FC9918
 );
 
-$theme-colors: map-merge($theme-colors,  $violet);
+$theme-colors: map-merge($theme-colors,  $custom-colors);
 
 // $grid-breakpoints: map-merge($grid-breakpoints, $xxxl-breakpoint);
 

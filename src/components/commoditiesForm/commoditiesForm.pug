@@ -40,6 +40,7 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                         div
                             label.fw-bold(for=sortBy) Sort by:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=sortBy name=sortBy)
+                                option.fw-normal(value='Updated at') Updated at (time)
                                 option.fw-normal(value='Price') Price
                                 option.fw-normal(value='Distance') Distance
                     .col.d-flex.gap-2.flex-column.justify-content-between
@@ -47,12 +48,12 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                             label.fw-bold(for=distanceFromStar) Max. distance from the star:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=distanceFromStar name=distanceFromStar)
                                 option.fw-normal(value='Any') Any
-                                option.fw-normal(value='100 ls') 100 ls
-                                option.fw-normal(value='500 ls') 500 ls
-                                option.fw-normal(value='1000 ls') 1000 ls
-                                option.fw-normal(value='2000 ls') 2000 ls
-                                option.fw-normal(value='5000 ls') 5000 ls
-                                option.fw-normal(value='10000 ls') 10000 ls
+                                option.fw-normal(value='100') 100 ls
+                                option.fw-normal(value='500') 500 ls
+                                option.fw-normal(value='1000') 1000 ls
+                                option.fw-normal(value='2000') 2000 ls
+                                option.fw-normal(value='5000') 5000 ls
+                                option.fw-normal(value='10000') 10000 ls
                         div
                             label.fw-bold(for=minSupply) Min. supply:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=minSupply name=minSupply)
@@ -77,12 +78,27 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                             label.fw-bold(for=maxDistanceFromRefStar) Max. distance from ref. system:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=maxDistanceFromRefStar name=maxDistanceFromRefStar)
                                 option.fw-normal(value='Any') Any
-                                option.fw-normal(value='25 LY') 25 LY
-                                option.fw-normal(value='50 LY') 50 LY
-                                option.fw-normal(value='100 LY') 100 LY
-                                option.fw-normal(value='250 LY') 250 LY
-                                option.fw-normal(value='500 LY') 500 LY
-                                option.fw-normal(value='1000 LY') 1000 LY
+                                option.fw-normal(value='25') 25 LY
+                                option.fw-normal(value='50') 50 LY
+                                option.fw-normal(value='100') 100 LY
+                                option.fw-normal(value='250') 250 LY
+                                option.fw-normal(value='500') 500 LY
+                                option.fw-normal(value='1000') 1000 LY
+                    .buy-sell-switch.col-1.d-flex.flex-column.text-center.justify-content-center
+                        input.btn-check(
+                            type="radio"
+                            id="buy-toggle"
+                            name="buy-sell-switch"
+                            autocomplete="off"
+                        )
+                        label.btn.px-2.border-0.mb-3(for='buy-toggle') i want to buy
+                        input.btn-check(
+                            type="radio"
+                            id="sell-toggle"
+                            name="buy-sell-switch"
+                            autocomplete="off"
+                        )
+                        label.btn.px-2.border-0(for='sell-toggle') i want to sell
             .row.justify-content-center
                 .col-md-3.mb-2.pt-5
                     button.btn.btn-violet.fs-6.fw-bold.text-light.text-uppercase.mt-5.w-100(

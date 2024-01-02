@@ -33,6 +33,11 @@
       border-color: $gray-500;
       background-color: $custom-white;
 
+      ul {
+        overflow-y: auto;
+        max-height: calc(3*($dd-font-size + 8px)*$lh-1 + 8px);
+      }
+
       .dropdown-item {
         cursor: pointer;
       }

@@ -2,6 +2,7 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../customSelect/customSelect.scss";
 @import "../inputDropdown/inputDropdown.scss";
+@import "../commoditiesTable/commoditiesTable.scss";
 
 
 .c-form {
@@ -19,6 +20,17 @@
   .btn-violet {
     font-family: 'SintonyBold', sans-serif;
     letter-spacing: 4px;
+  }
+
+  .buy-sell-switch {
+    label {
+      background-color: $secondary-bg-subtle;
+    }
+
+    label:hover,
+    .btn-check:checked+.btn{
+      background-color: $custom-light-orange;
+    }
   }
 }
 

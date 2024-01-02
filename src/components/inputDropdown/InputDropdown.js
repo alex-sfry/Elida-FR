@@ -27,20 +27,17 @@ export class InputDropdown {
     };
 
     handleDropdownInput = async (e) => {
-        await FetchData.fetch(
+        const data = await FetchData.fetch(
             {
                 url: `https://jsonplaceholder.typicode.com/users`,
                 method: 'GET',
                 contentType: 'application/json',
                 body: null
             }
-        )
-        .then(data => {
-            this.dropdownListItems.forEach((item, index) => {
-                item.textContent = data[index].name;
-            });
+        );
 
-            // console.log(data);
+        this.dropdownListItems.forEach((item, index) => {
+            item.textContent = data[index].name;
         });
 
         this.dropdownListItems.forEach(item => {

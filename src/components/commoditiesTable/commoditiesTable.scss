@@ -1,0 +1,23 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.c-table {
+  thead {
+    border-color: $custom-light-orange;
+  }
+
+  tr {
+    td,
+    th {
+      white-space: nowrap;
+      min-width: fit-content;
+    }
+
+    td:first-child,
+    th:first-child {
+      white-space: nowrap;
+      min-width: 240px;
+      max-width: 300px;
+    }
+  }
+}

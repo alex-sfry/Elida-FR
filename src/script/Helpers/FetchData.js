@@ -15,9 +15,9 @@ export class FetchData {
 
         if (res.ok) {
             if (res.headers.get('Content-Type').includes('application/json')) {
-                return res.json();
+                return await res.json();
             } else {
-                return res.text();
+                return await res.text();
             }
         } else {
             console.log(`Error: ${res.status}`);

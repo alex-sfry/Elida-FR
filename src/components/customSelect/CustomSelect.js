@@ -1,9 +1,11 @@
+import {FetchData} from "../../script/Helpers/FetchData.js";
+
 export class CustomSelect {
     constructor(config) {
         if (!config) return console.log('provide config');
 
         this.commoditiesSearchField = document.querySelector(`#${config.search}`);
-        this.dropdownListItems = document.querySelectorAll(`#${config.search} ~ .dropdown-item`);
+        this.dropdownListItems = document.querySelectorAll(`#${config.search} + ul > .dropdown-item`);
         this.selectedItemsDiv = document.querySelector(`#${config.selected}`);
         this.itemsToSubmitSelect = document.querySelector('.dropdown-container > select');
         this.selectedItemsArr = [];
@@ -13,8 +15,24 @@ export class CustomSelect {
             <button class="btn-close px-2" type="button" aria-label="Close"></button>
         `;
 
+        this.fetchOptionItems();
         this.setEventListeners();
     }
+
+    fetchOptionItems = async () => {
+        const data = await FetchData.fetch(
+            {
+                url: `https://jsonplaceholder.typicode.com/users`,
+                method: 'GET',
+                contentType: 'application/json',
+                body: null
+            }
+        );
+
+        this.dropdownListItems.forEach((item, index) => {
+            item.textContent = data[index].name;
+        });
+    };
 
     handleDropdownInput = (e) => {
         this.dropdownListItems.forEach(item => {

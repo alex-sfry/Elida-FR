@@ -1,3 +1,5 @@
+- const lh = 'lh-1';
+
 .c-select.dropdown-container.m-0.bg-transparent
     select.form-select.form-select-sm.d-none(id='c-hiddenSelect' name=inputCommoditiesName)
     .dropdown.bg-transparent
@@ -9,9 +11,13 @@
             aria-expanded='false'
         )
             | Select commodities
-        div
-            ul.dropdown-menu.px-1.w-100.p-1.mt-1.shadow-sm
-                input.form-control.shadow-none.bg-transparent.fw-normal(type='text' id=commoditiesSelectInput placeholder='search')
-                li.dropdown-item.fw-normal Action
-                li.dropdown-item.fw-normal Another action
-                li.dropdown-item.fw-normal Something else here
+        .dropdown-menu.px-1.w-100.p-1.mt-1.shadow-sm
+            input.form-control.bg-transparent.fw-normal.shadow-sm(
+                type='text'
+                id=commoditiesSelectInput
+                placeholder='search'
+            )
+            ul.px-0.pt-2.pb-0.mb-0
+                li.dropdown-item.fw-normal.px-2(class=lh) Action
+                li.dropdown-item.fw-normal.px-2(class=lh) Another action
+                li.dropdown-item.fw-normal.px-2(class=lh) Something else here
