@@ -42,8 +42,18 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=sortBy name=sortBy)
                                 option.fw-normal(value='Updated at') Updated at (time)
                                 option.fw-normal(value='Price') Price
-                                option.fw-normal(value='Distance') Distance
+                                option.fw-normal(value='Distance') Distance (LY)
                     .col.d-flex.gap-2.flex-column.justify-content-between
+                        div
+                            label.fw-bold(for=maxDistanceFromRefStar) Max. distance from ref. system:
+                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=maxDistanceFromRefStar name=maxDistanceFromRefStar)
+                                option.fw-normal(value='Any') Any
+                                option.fw-normal(value='25') 25 LY
+                                option.fw-normal(value='50') 50 LY
+                                option.fw-normal(value='100') 100 LY
+                                option.fw-normal(value='250') 250 LY
+                                option.fw-normal(value='500') 500 LY
+                                option.fw-normal(value='1000') 1000 LY
                         div
                             label.fw-bold(for=distanceFromStar) Max. distance from the star:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=distanceFromStar name=distanceFromStar)
@@ -55,7 +65,7 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                                 option.fw-normal(value='5000') 5000 ls
                                 option.fw-normal(value='10000') 10000 ls
                         div
-                            label.fw-bold(for=minSupply) Min. supply:
+                            label.fw-bold(for=minSupply) Min. supply / demand:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=minSupply name=minSupply)
                                 option.fw-normal(value='Any') Any
                                 option.fw-normal(value='100') 100
@@ -65,25 +75,15 @@ form.c-form.py-2.px-4.rounded-2.w-100.d-flex.flex-column.mt-4(action='' method='
                                 option.fw-normal(value='5000') 5000
                                 option.fw-normal(value='10000') 10000
                         div
-                            label.fw-bold(for=minDemand) Min. demand:
+                            label.fw-bold(for=minDemand) Max. age of data:
                             select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=minDemand name=minDemand)
                                 option.fw-normal(value='Any') Any
-                                option.fw-normal(value='100') 100
-                                option.fw-normal(value='500') 500
-                                option.fw-normal(value='1000') 1000
-                                option.fw-normal(value='2000') 2000
-                                option.fw-normal(value='5000') 5000
-                                option.fw-normal(value='10000') 10000
-                        div
-                            label.fw-bold(for=maxDistanceFromRefStar) Max. distance from ref. system:
-                            select.form-select.form-select-sm.shadow-none.border-dark.fs-6.fw-normal(id=maxDistanceFromRefStar name=maxDistanceFromRefStar)
-                                option.fw-normal(value='Any') Any
-                                option.fw-normal(value='25') 25 LY
-                                option.fw-normal(value='50') 50 LY
-                                option.fw-normal(value='100') 100 LY
-                                option.fw-normal(value='250') 250 LY
-                                option.fw-normal(value='500') 500 LY
-                                option.fw-normal(value='1000') 1000 LY
+                                option.fw-normal(value='1 hour') 1 hour
+                                option.fw-normal(value='10 hours') 10 hours
+                                option.fw-normal(value='1 day') 1 day
+                                option.fw-normal(value='10 days') 10 days
+                                option.fw-normal(value='20 days') 20 days
+                                option.fw-normal(value='30 days') 30 days
                     .buy-sell-switch.col-1.d-flex.flex-column.text-center.justify-content-center
                         input.btn-check(
                             type="radio"

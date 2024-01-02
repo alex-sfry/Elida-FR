@@ -97,11 +97,23 @@
                             <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="sortBy" name="sortBy">
                               <option class="fw-normal" value="Updated at">Updated at (time)</option>
                               <option class="fw-normal" value="Price">Price</option>
-                              <option class="fw-normal" value="Distance">Distance</option>
+                              <option class="fw-normal" value="Distance">Distance (LY)</option>
                             </select>
                           </div>
                         </div>
                         <div class="col d-flex gap-2 flex-column justify-content-between">
+                          <div>
+                            <label class="fw-bold" for="maxDistanceFromRefStar">Max. distance from ref. system:</label>
+                            <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="maxDistanceFromRefStar" name="maxDistanceFromRefStar">
+                              <option class="fw-normal" value="Any">Any</option>
+                              <option class="fw-normal" value="25">25 LY</option>
+                              <option class="fw-normal" value="50">50 LY</option>
+                              <option class="fw-normal" value="100">100 LY</option>
+                              <option class="fw-normal" value="250">250 LY</option>
+                              <option class="fw-normal" value="500">500 LY</option>
+                              <option class="fw-normal" value="1000">1000 LY</option>
+                            </select>
+                          </div>
                           <div>
                             <label class="fw-bold" for="distanceFromStar">Max. distance from the star:</label>
                             <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="distanceFromStar" name="distanceFromStar">
@@ -115,7 +127,7 @@
                             </select>
                           </div>
                           <div>
-                            <label class="fw-bold" for="minSupply">Min. supply:</label>
+                            <label class="fw-bold" for="minSupply">Min. supply / demand:</label>
                             <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="minSupply" name="minSupply">
                               <option class="fw-normal" value="Any">Any</option>
                               <option class="fw-normal" value="100">100</option>
@@ -127,27 +139,15 @@
                             </select>
                           </div>
                           <div>
-                            <label class="fw-bold" for="minDemand">Min. demand:</label>
+                            <label class="fw-bold" for="minDemand">Max. age of data:</label>
                             <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="minDemand" name="minDemand">
                               <option class="fw-normal" value="Any">Any</option>
-                              <option class="fw-normal" value="100">100</option>
-                              <option class="fw-normal" value="500">500</option>
-                              <option class="fw-normal" value="1000">1000</option>
-                              <option class="fw-normal" value="2000">2000</option>
-                              <option class="fw-normal" value="5000">5000</option>
-                              <option class="fw-normal" value="10000">10000</option>
-                            </select>
-                          </div>
-                          <div>
-                            <label class="fw-bold" for="maxDistanceFromRefStar">Max. distance from ref. system:</label>
-                            <select class="form-select form-select-sm shadow-none border-dark fs-6 fw-normal" id="maxDistanceFromRefStar" name="maxDistanceFromRefStar">
-                              <option class="fw-normal" value="Any">Any</option>
-                              <option class="fw-normal" value="25">25 LY</option>
-                              <option class="fw-normal" value="50">50 LY</option>
-                              <option class="fw-normal" value="100">100 LY</option>
-                              <option class="fw-normal" value="250">250 LY</option>
-                              <option class="fw-normal" value="500">500 LY</option>
-                              <option class="fw-normal" value="1000">1000 LY</option>
+                              <option class="fw-normal" value="1 hour">1 hour</option>
+                              <option class="fw-normal" value="10 hours">10 hours</option>
+                              <option class="fw-normal" value="1 day">1 day</option>
+                              <option class="fw-normal" value="10 days">10 days</option>
+                              <option class="fw-normal" value="20 days">20 days</option>
+                              <option class="fw-normal" value="30 days">30 days</option>
                             </select>
                           </div>
                         </div>
